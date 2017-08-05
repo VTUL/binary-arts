@@ -1,0 +1,21 @@
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+.text-left {
+  text-align: left;
+}
+.text-centered {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+#masthead {
+  min-height: 75px;
+  .navbar-brand {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
