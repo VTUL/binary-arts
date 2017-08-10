@@ -42,6 +42,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'fcrepo_wrapper'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -63,17 +65,9 @@ group :development, :test do
 end
 
 gem 'rsolr', '>= 1.0'
-group :development, :test do
-end
 
 gem 'jquery-rails'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
-group :development, :test do
-end
 
-group :development, :test do
-  gem 'fcrepo_wrapper'
-  gem 'rspec-rails'
-end
-
+gem 'hydra-role-management'
