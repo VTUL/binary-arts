@@ -3,4 +3,6 @@ class Collection < ActiveFedora::Base
   include ::Hyrax::CollectionBehavior
   # You can replace these metadata if they're not suitable
   include Hyrax::BasicMetadata
+
+  validates :title, presence: { message: 'Your collection must have a title.' }
 end
