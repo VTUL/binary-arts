@@ -15,12 +15,18 @@ module BinaryArts
       property :tags, predicate: ::RDF::Vocab::DC11.subject do |index|
         index.as :stored_searchable, :facetable
       end
-      property :length, predicate: ::RDF::Vocab::DC.extent, multiple: false
+      property :length, predicate: ::RDF::Vocab::DC.extent, multiple: false do |index|
+        index.as :stored_searchable
+      end
       property :software, predicate: ::RDF::Vocab::DCMIType.Software do |index|
         index.as :stored_searchable
       end
-      property :medium, predicate: ::RDF::Vocab::DC.medium
-      property :location, predicate: ::RDF::Vocab::DC.Location
+      property :medium, predicate: ::RDF::Vocab::DC.medium do |index|
+        index.as :stored_searchable
+      end
+      property :location, predicate: ::RDF::Vocab::DC.Location do |index|
+        index.as :stored_searchable
+      end
     end
   end
 end
