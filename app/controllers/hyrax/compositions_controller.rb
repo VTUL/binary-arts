@@ -7,5 +7,6 @@ module Hyrax
     include Hyrax::WorksControllerBehavior
     include Hyrax::BreadcrumbsForWorks
     self.curation_concern_type = ::Composition
+    self.show_presenter = MusicWorkPresenter
   end
 end

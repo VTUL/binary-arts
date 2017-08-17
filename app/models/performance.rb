@@ -12,5 +12,7 @@ class Performance < ActiveFedora::Base
 
   self.human_readable_type = 'Performance'
 
-  property :performer, predicate: ::RDF::Vocab::DC11.creator
+  property :performer, predicate: ::RDF::Vocab::DC11.creator do |index|
+    index.as :stored_searchable, :facetable
+  end
 end

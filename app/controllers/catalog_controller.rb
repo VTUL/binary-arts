@@ -31,7 +31,7 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       qt: "search",
       rows: 10,
-      qf: "title_tesim description_tesim creator_tesim keyword_tesim"
+      qf: "title_tesim description_tesim composer_tesim performer_tesim, tags_tesim"
     }
 
     # solr field configuration for document/show views
@@ -41,12 +41,12 @@ class CatalogController < ApplicationController
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
-    config.add_facet_field solr_name("human_readable_type", :facetable), label: "Type", limit: 5
-    config.add_facet_field solr_name("resource_type", :facetable), label: "Resource Type", limit: 5
-    config.add_facet_field solr_name("creator", :facetable), limit: 5
-    config.add_facet_field solr_name("contributor", :facetable), label: "Contributor", limit: 5
-    config.add_facet_field solr_name("keyword", :facetable), limit: 5
-    config.add_facet_field solr_name("subject", :facetable), limit: 5
+    config.add_facet_field solr_name("human_readable_type", :facetable), label: "Type", limit: 2
+    config.add_facet_field solr_name("genre", :facetable), label: "Genre", limit: 5
+    config.add_facet_field solr_name("composer", :facetable), label: "Composer", limit: 5
+    config.add_facet_field solr_name("performer", :facetable), label: "Performer", limit: 5
+    config.add_facet_field solr_name("instruments", :facetable), label: "Instruments", limit: 5
+    config.add_facet_field solr_name("tags", :facetable), label: "Tags", limit: 5
     config.add_facet_field solr_name("language", :facetable), limit: 5
     config.add_facet_field solr_name("based_near", :facetable), limit: 5
     config.add_facet_field solr_name("publisher", :facetable), limit: 5

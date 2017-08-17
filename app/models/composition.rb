@@ -12,5 +12,8 @@ class Composition < ActiveFedora::Base
 
   self.human_readable_type = 'Composition'
 
-  property :composer, predicate: ::RDF::Vocab::DC11.creator
+  property :composer, predicate: ::RDF::Vocab::DC11.creator do |index|
+    index.as :stored_searchable, :facetable
+  end
+
 end
