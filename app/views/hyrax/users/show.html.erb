@@ -1,0 +1,11 @@
+<div class="row profile">
+  <div class="col-xs-3">
+    <%= image_tag @user.avatar.url(:medium), width: '100%' if @user.avatar.present? %>
+    <%= render 'left_sidebar' %>
+  </div>
+  <!-- right col -->
+  <div class="col-xs-9">
+    <%= @user.personal_statement.html_safe %>
+    <%= render 'profile_tabs', presenter: @presenter %>
+  </div>
+</div>
