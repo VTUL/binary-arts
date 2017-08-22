@@ -15,14 +15,14 @@ namespace :binaryarts do
       email = email.strip
       user = User.find_by({email: email})
 
-      if user.nil?
-        user = User.new(email: email)
+      if !user.nil?
+        user.roles << admin_role
+        user.roles = user.roles.uniq
+        user.save!
+        puts "#{email} upgraded."
+      else
+        puts "#{email} user does not exist in system."
       end
-
-      user.roles << admin_role
-      user.roles = user.roles.uniq
-      user.save!
-      puts "#{email} upgraded."
     end
   end
 
