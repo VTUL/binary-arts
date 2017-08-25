@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  get '/user_links/user/:id/link/:link_id/delete', to: 'hyrax/users#user_link_delete'  
   get '/about', to: 'static#about'  
   
   concern :searchable, Blacklight::Routes::Searchable.new
