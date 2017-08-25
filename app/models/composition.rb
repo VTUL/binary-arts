@@ -16,4 +16,5 @@ class Composition < ActiveFedora::Base
     index.as :stored_searchable, :facetable
   end
 
+  has_many :performances
 end

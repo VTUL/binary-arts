@@ -15,4 +15,6 @@ class Performance < ActiveFedora::Base
   property :performer, predicate: ::RDF::Vocab::DC11.creator do |index|
     index.as :stored_searchable, :facetable
   end
+
+  belongs_to :composition, predicate: ActiveFedora::RDF::Fcrepo::RelsExt.isPartOf
 end
