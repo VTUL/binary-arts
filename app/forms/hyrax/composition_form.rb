@@ -4,10 +4,10 @@ module Hyrax
   class CompositionForm < Hyrax::Forms::WorkForm
     self.model_class = ::Composition
     self.terms -= [:creator, :keyword, :subject]
-    self.terms += [:composer, :instruments, :date, :tags,
-                   :length, :genre, :software, :medium]
+    self.terms += [:instruments, :date, :tags,
+                   :length, :genre, :software, :medium, :composer]
 
-    self.required_fields = [:composer, :title, :instruments]
+    self.required_fields = [:title, :instruments]
 
     # Fields that are automatically drawn on the page below the fold
     def secondary_terms

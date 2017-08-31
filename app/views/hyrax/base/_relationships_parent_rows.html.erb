@@ -1,0 +1,18 @@
+<% presenters = presenter.member_of_collection_presenters %>
+<% if !presenters.blank? %>
+
+  <%# Render presenters which aren't specified in the 'presenter_types' %>
+  <% presenter.grouped_presenters(except: presenter.presenter_types).each_pair do |model_name, items| %>
+    <%= render 'relationships_parent_row', type: model_name, items: items, presenter: presenter %>
+  <% end %>
+
+  <%# Render grouped presenters showing rows or an 'empty' row if there are none for that type %>
+  <% presenter.presenter_types.each do |type| %>
+    <% if !presenter.grouped_presenters(filtered_by: type).blank? %>
+      <% presenter.grouped_presenters(filtered_by: type).each_pair do |model_name, items| %>
+        <%= render 'relationships_parent_row', type: type, items: items, presenter: presenter %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
