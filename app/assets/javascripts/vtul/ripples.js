@@ -33,6 +33,7 @@ let blocks;
 let ripples = [];
 
 function setup() {
+  if($('.homepage').length) {
     createCanvas(innerWidth, innerHeight);
 //	background(255);
     noStroke();
@@ -48,6 +49,7 @@ function setup() {
             new Block(left_padding + block_size * (x + 0.5), top_padding + block_size * (y + 0.5), y * Math.floor(width / block_size) + x)
         )
     );
+  }
 }
 
 function draw() {

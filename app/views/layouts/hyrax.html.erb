@@ -7,6 +7,7 @@
 
   <body>
     <a href="#skip_to_content" class="sr-only">Skip to Content</a>
+    <div class="<%= 'homepage' if current_page?('/') %>">
     <%= render partial: '/masthead' %>
     <%= render '/controls' %>
     <%= content_for(:navbar) %>
@@ -49,5 +50,6 @@
       <% end %>
     </div><!-- /#content-wrapper -->
     <%= render 'shared/ajax_modal' %>
+    </div>
   </body>
 </html>
