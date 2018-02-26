@@ -1,4 +1,17 @@
 .navbar-default {
   background: none;
   border: none;
+  .navbar-nav {
+    li {
+      a {
+        color: rgba(0,0,0,1.00);
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+  }
 }
