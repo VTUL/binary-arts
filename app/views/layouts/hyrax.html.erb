@@ -44,6 +44,8 @@
               </div>
             </div>
           <% end %>
+          
+          <%= render '/hyrax/homepage/hero' if current_page?('/') %>          
 
           <%= content_for?(:content) ? yield(:content) : yield %>
         </div>
