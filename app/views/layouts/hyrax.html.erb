@@ -8,6 +8,16 @@
   <body>
     <a href="#skip_to_content" class="sr-only">Skip to Content</a>
     <div class="<%= 'homepage' if current_page?('/') %>">
+    <div class="background">
+      <div id="background1"></div>
+      <div id="background2"></div>
+      <div id="background3"></div>
+      <div id="background4"></div>
+      <div id="background5"></div>
+    </div>
+
+
+
     <%= render partial: '/masthead' %>
     <%= render '/controls' %>
     <%= content_for(:navbar) %>
