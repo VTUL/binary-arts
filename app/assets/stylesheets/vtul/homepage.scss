@@ -24,6 +24,7 @@
   font-size: 14px;
   color: rgba(50,50,50,1.00);
   line-height: 30px;
+  background-color: white;
   h3 {
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
     font-size: 30px;
@@ -108,4 +109,29 @@
 	z-index: 25;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+}
+.home_text_section {
+  background-color: white;
+  h2.welcome_shadow {
+    position: absolute;
+    font-size: 250px;
+    line-height: 300px;
+    font-weight: 700;
+    color: rgba(50, 50, 50, .05);
+    text-align: left;
+    left: -50px;
+    margin-top: -15px;
+  }
+
+  .explore_wrapper {
+    h3 {
+      font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 80px;
+	line-height: 95px;
+	letter-spacing: -2px;
+	color:rgba(252, 71, 59, 1.00);
+	margin: 0;
+	padding: 0;
+    }
+  }
 }
