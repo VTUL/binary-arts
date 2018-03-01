@@ -101,7 +101,6 @@
 	font-family: din;
 	font-size: 34px;
 	color: rgba(50,50,50,1.00);
-	/*background: rgba(87,208,224,1.00);*/
 	padding: 10px;
 	position: absolute;
 	top: 296px;
@@ -126,7 +125,7 @@
   .explore_wrapper {
     width: 84%;
     height: 500px;
-    left: 11%;
+    left: 5%;
     font-family: apercu_regular_pro;
     font-size: 14px;
     color: rgba(50,50,50,1.00);
@@ -156,7 +155,7 @@
     .plus_box {
       height: 500px;
       width: 150px;
-/*	background:url(../Images/plus-icons.svg); */
+      background-image: image-url('vtul/plus-icons.svg');
       position: absolute;
       top: -50px;
       left: -100px;
