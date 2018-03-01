@@ -54,7 +54,7 @@
               </div>
             </div>
           <% end %>
-          
+          <%= link_to "Compel", root_path, class: 'logo' %>          
           <%= render '/hyrax/homepage/hero' if current_page?('/') %>          
 
           <%= content_for?(:content) ? yield(:content) : yield %>
