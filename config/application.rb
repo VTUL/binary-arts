@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module BinaryArts
+module Compel
   class Application < Rails::Application
 
       # The compile method (default in tinymce-rails 4.5.2) doesn't work when also
