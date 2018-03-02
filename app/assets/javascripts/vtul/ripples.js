@@ -32,6 +32,10 @@ let blocks;
  */
 let ripples = [];
 
+$(window).resize(function(){
+  setup();
+})
+
 function setup() {
   if($('.homepage').length) {
     createCanvas(innerWidth, innerHeight);
