@@ -25,12 +25,18 @@ a.logo {
   color: rgba(252, 71, 59, 1.00);
   -webkit-transform: rotateZ(270deg);
   transform: rotateZ(270deg);
+  text-transform: uppercase;
   position: fixed;
   z-index: 1001;
   padding: 0;
   left: 0;
-  top: 70px;
+  top: 74px;
   margin: 0;
   text-align: center;
 }
-
+a.logo:hover {
+  text-decoration: none;
+  font-size: 22px;
+  left: -2px;
+  top: 78px;
+}

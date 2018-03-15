@@ -44,6 +44,7 @@ $(window).resize(function(){
 });
 
 function setup() {
+  if($('.homepage').length) {
     createCanvas(innerWidth, innerHeight);
     //	background(255);
     noStroke();
@@ -59,9 +60,11 @@ function setup() {
             return new Block(left_padding + block_size * (x + 0.5), top_padding + block_size * (y + 0.5), y * Math.floor(width / block_size) + x);
         });
     });
+  }
 }
 
 function draw() {
+  if($('.homepage').length) {
     if (keyIsDown(32)) {
         if (random() < pow(fps / 60, 3)) {
             ripples.push(new Ripple(random(width), random(height), 0.4));
@@ -117,6 +120,7 @@ function draw() {
         text('Ripples: ' + ripples.length, 10, 24);
         text('FPS: ' + avgFps, 10, 48);
     }
+  }
 }
 
 //function mousePressed() {
