@@ -3,9 +3,11 @@
   height: 5000px;
   position: fixed;
   top: 0;
+  z-index: -1;
+}
+.background_home {
   z-index: 30;
 }
-
 #background1, #background2, #background3, #background4, #background5 {
   width: 20%;
   height: 100%;
